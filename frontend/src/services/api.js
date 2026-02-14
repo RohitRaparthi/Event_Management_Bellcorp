@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://event-management-bellcorp.onrender.com/api';
 
 export const authAPI = {
   register: async (name, email, password) => {
