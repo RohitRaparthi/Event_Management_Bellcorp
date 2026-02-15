@@ -130,7 +130,7 @@ export const Dashboard = () => {
   const [successMessage, setSuccessMessage] = useState('');
   const { token, user } = useContext(AuthContext);
 
-  const fetchMyEvents = async () => {
+  const fetchMyEvents = useCallback(async () => {
     if (!token) return;
     try {
       setLoading(true);
@@ -141,7 +141,7 @@ export const Dashboard = () => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [token]);
 
   useEffect(() => {
     if (token) {
