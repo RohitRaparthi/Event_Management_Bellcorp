@@ -147,7 +147,7 @@ export const Dashboard = () => {
     if (token) {
       fetchMyEvents();
     }
-  }, [token]);
+  }, [token, fetchMyEvents]);
 
   const handleCancel = async (eventId) => {
     if (window.confirm('Are you sure you want to cancel this registration?')) {
